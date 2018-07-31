@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@layout/border">
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icono_acel"
+        android:layout_above="@+id/Grafica"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imagen"
+        android:layout_toEndOf="@+id/imagen"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical|center_horizontal" />
+
+
+
+    <LinearLayout
+        android:id="@+id/tabla_aceleraciones"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_below="@+id/nombre"
+        android:layout_toRightOf="@+id/imagen"
+        android:layout_toEndOf="@+id/imagen">
+        <TextView
+            android:id="@+id/acelx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="TextView1"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal" />
+        <TextView
+            android:id="@+id/acely"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView2"
+            android:layout_toRightOf="@+id/acelx"
+            android:layout_toEndOf="@+id/acelx"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal" />
+        <TextView
+            android:id="@+id/acelz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView3"
+            android:layout_alignTop="@+id/acelx"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal" />
+
+
+    </LinearLayout>
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/Grafica"
+        android:layout_width="fill_parent"
+        android:layout_height="200px"
+        androidplot.rangelabel="amplitud"
+        androidPlot.domainLabel="tiempo"
+        android:layout_below="@+id/tabla_aceleraciones"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="none">
+    <item
+        android:id="@+id/accion1"
+        android:title="Cambiar rango a +/-2g"/>
+
+    <item
+        android:id="@+id/accion2"
+        android:title="Cambiar rango a +/-4g"/>
+
+    <item
+        android:id="@+id/accion3"
+        android:title="Cambiar rango a +/-8g"/>
+    <item
+        android:id="@+id/accion4"
+        android:title="Cambiar rango a +/-16g"/>
+    </group>
+</menu>

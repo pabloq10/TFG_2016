@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Comunicacion BT</string>
+    <string name="title_activity_ventana_transmision">ventana_transmision</string>
+    <string name="title_activity_transmision_datos">transmision_datos</string>
+</resources>
